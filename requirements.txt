@@ -1,0 +1,3 @@
+mistune
+jinja2
+django-htmlmin
