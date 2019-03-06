@@ -1,7 +1,7 @@
-Hi, my name is Maxim Danilchenko. 
+Hi, my name is Maxim Danilchenko. And this is my dev blog.
 
-Here I'm trying to write some posts 
-about software development sometimes. 
+Here you can find some posts 
+about software development. 
 Mostly about python and it's ecosystem. 
 
 If you want to contact me: 

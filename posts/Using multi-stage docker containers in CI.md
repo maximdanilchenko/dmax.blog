@@ -1,23 +1,19 @@
+Multi-stage builds are very useful to optimize usage of Dockerfiles
+for CI and for development process.
+You can make multiple stages using `FROM` statements, 
+inherit them by name (given with `as name` statement) or
+selectively copy artifacts from one stage to another.
 
-Multi-stage Dockerfile:
+You can see official 
+[documentation](https://docs.docker.com/develop/develop-images/multistage-build/#use-multi-stage-builds) 
+for example about using multi-stage builds for copying artifacts.
+
+But one of the my favourite use-case is dividing Dockerfile
+on stages for different build environments, 
+like test, dev, prod and so on, like this:
 
 ```docker
 FROM python:3.6-alpine3.9 as builder
-RUN apk add --no-cache \
-git \
-make \
-gcc \
-linux-headers \
-libc-dev \
-openssl-dev \
-libffi-dev \
-postgresql-dev \
-build-base \
-libxslt-dev \
-libxml2-dev \
-zlib-dev \
-jpeg-dev \
-bash
 ADD requirements.txt /app/
 WORKDIR /app
 RUN pip3 install --upgrade -r requirements.txt
@@ -33,7 +29,10 @@ ADD . /app
 CMD [ "python", "./main.py" ]
 ```
 
-Building `test` stage:
+Next we can build image from `test`, `deploy` 
+or even `builder` stage:
+
 ```bash
 > docker build --target test --tag tester
 ```
+
