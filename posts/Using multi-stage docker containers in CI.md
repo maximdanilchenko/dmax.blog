@@ -1,3 +1,5 @@
+*6 Mar 2019*
+
 Multi-stage builds are very useful to optimize usage of Dockerfiles
 for CI and for development process.
 You can make multiple stages using `FROM` statements, 
@@ -36,3 +38,6 @@ or even `builder` stage:
 > docker build --target test --tag tester
 ```
 
+---
+
+If you find something wrong in this post fill free to create issues [here](https://github.com/maximdanilchenko/dmax.blog/issues).

@@ -1,3 +1,5 @@
+*26 Feb 2019*
+
 Thanks to python 3.5+ asyncio we can write concurrent 
 code using the async/await syntax. 
 It is perfect for IO-bound tasks. 
@@ -258,9 +260,8 @@ async def create_user(request: web.Request):
 Now restart your app, go to SWAGGER console 
 page and use your awesome interactive documentation!
 
-You can find sources here.
+You can find sources [here](https://github.com/maximdanilchenko/dmax.blog/tree/master/sources/01).
 
 ---
 
-If you find something wrong in this post fill free to create issues here.
-
+If you find something wrong in this post fill free to create issues [here](https://github.com/maximdanilchenko/dmax.blog/issues).

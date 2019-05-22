@@ -33,7 +33,7 @@ async def get_users(request: web.Request):
         500: {"description": "Server error"},
     }
 )
-@request_schema(User)
+@request_schema(User, location='query')
 async def create_user(request: web.Request):
     new_user = request["data"]
     request.app["users"].append(new_user)
