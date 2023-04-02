@@ -10,11 +10,12 @@
     <link rel="manifest" href="/site.webmanifest">
 
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/css/uikit.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- UIkit JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.24/dist/js/uikit-icons.min.js"></script>
 
     <!-- Code highlight -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css">
@@ -28,11 +29,11 @@
 <body>
 <div>
     <div uk-sticky="media: 960; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-        <nav class="uk-navbar-container uk-navbar-transparent uk-margin uk-light uk-background-secondary" uk-navbar>
-            <div class="uk-navbar-left">
+        <nav class="uk-navbar-container uk-margin uk-dark uk-navbar-transparent uk-box-shadow-small uk-background-default" uk-navbar>
+            <div class="uk-navbar-left uk-margin-medium-left">
                 <ul class="uk-navbar-nav">
                     <li class="uk-navbar-item">
-                        <a href="https://github.com/maximdanilchenko" uk-icon="icon: github"></a>
+                        <a href="https://github.com/maximdanilchenko" uk-icon="icon: github"#00d5ff"></a>
                     </li>
                     <li class="uk-navbar-item">
                         <a href="https://linkedin.com/in/maximdanilchenko" uk-icon="icon: linkedin"></a>
@@ -45,7 +46,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="uk-navbar-right">
+            <div class="uk-navbar-right uk-margin-medium-right">
                 <ul class="uk-navbar-nav">
                     <li class="uk-navbar-item uk-margin-small-right">
                         <a href="." uk-icon="icon: home"></a>
@@ -60,11 +61,11 @@
             <div class="uk-width-expand">
                 <div class="uk-container uk-container-small uk-position-relative">
                     <div>
-                        <h1 class="uk-heading-primary uk-margin uk-text-muted">{{header}}</h1>
+                        <h1 class="uk-heading-primary uk-margin">{{header}}</h1>
                         {{body}}
                         {% if header == "Welcome" %}
                         <hr>
-                        <h1 class="uk-heading-primary uk-margin uk-text-muted">Posts</h1>
+                        <h1 class="uk-heading-primary uk-margin">Posts</h1>
                         <div class="uk-grid-small uk-child-width-1-2@s uk-margin" uk-grid>
                             {% for (post_url, post_name) in posts %}
                             <div>
@@ -86,14 +87,18 @@
             </div>
             <div class="uk-width-1-6 uk-visible@l">
                 {% if header != "Welcome" %}
-                <ul class="uk-nav-default" uk-nav>
-                    <li class="uk-text-lead">Other posts</li>
-                    {% for (post_url, post_name) in posts %}
-                    {% if post_name != header %}
-                    <li><a href="{{ post_url }}">{{ post_name }}</a></li>
-                    {% endif %}
-                    {% endfor %}
-                </ul>
+                <div uk-sticky="offset: 100">
+                    <div>
+                        <ul class="uk-nav-default" uk-nav>
+                            <li class="uk-text-lead">Other posts</li>
+                            {% for (post_url, post_name) in posts %}
+                            {% if post_name != header %}
+                            <li><a href="{{ post_url }}">{{ post_name }}</a></li>
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
                 {% endif %}
             </div>
         </div>
