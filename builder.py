@@ -32,7 +32,7 @@ if __name__ == "__main__":
                     tmp.render(
                         title=name,
                         header=name,
-                        body=mistune.markdown(content),
+                        body=mistune.markdown(content, escape=False),
                         posts=posts,
                     )
                 )

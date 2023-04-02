@@ -1,9 +1,9 @@
-*6 Mar 2019*
+<p class="uk-text-italic">6 Mar 2019</p>
 
 Multi-stage builds are very useful to optimize usage of Dockerfiles
 for CI and for development process.
-You can make multiple stages using `FROM` statements, 
-inherit them by name (given with `as name` statement) or
+You can make multiple stages using <strong>FROM</strong> statements, 
+inherit them by name (given with <strong>as name</strong> statement) or
 selectively copy artifacts from one stage to another.
 
 You can see official 
@@ -31,8 +31,8 @@ ADD . /app
 CMD [ "python", "./main.py" ]
 ```
 
-Next we can build image from `test`, `deploy` 
-or even `builder` stage:
+Next we can build image from <strong>test</strong>, <strong>deploy</strong> 
+or even <strong>builder</strong> stage:
 
 ```bash
 > docker build --target test --tag tester

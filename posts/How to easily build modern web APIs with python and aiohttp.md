@@ -1,4 +1,4 @@
-*26 Feb 2019*
+<p class="uk-text-italic">26 Feb 2019</p>
 
 Thanks to python 3.5+ asyncio we can write concurrent 
 code using the async/await syntax. 
@@ -6,12 +6,12 @@ It is perfect for IO-bound tasks.
 Since web is mostly IO-bound with asyncio we can build
 high performance web apps. There are already several web
 frameworks built for it. 
-My favourite one is `aiohttp`. It is stable, fast, 
+My favourite one is <strong>aiohttp</strong>. It is stable, fast, 
 has built-in http client, a lot of third-party tools 
 and good maintainers and community.
 
 In this post I will show how to build and document
-REST APIs with `aiohttp` and `apispec`. 
+REST APIs with <strong>aiohttp</strong> and <strong>apispec</strong>. 
 With help of two decorators and one middleware 
 you can build self-documented API 
 with auto-validation support out of the box. 
@@ -19,7 +19,7 @@ No yaml-docstrings, just python code.
 
 ### 1. Preparation
 
-First, we need to install `aiohttp-apispec`.
+First, we need to install <strong>aiohttp-apispec</strong>.
 
 ```bash
 > pip install aiohttp-apispec
@@ -93,7 +93,7 @@ Finally we can run our first version:
 We already can use our API, but it has no validation
 of client request content. To add it we need its schema description.
 One of the best instruments for it is 
-powerful and feature-reach `marshmallow` library. 
+powerful and feature-reach <strong>marshmallow</strong> library. 
 
 We can use it like so:
 
@@ -113,9 +113,9 @@ class User(Schema):
 Next, magic begins. To make our app
 validate request to specific view 
 with this schema all we need is to add
-`@request_schema` decorator to this view.
+<strong>@request_schema</strong> decorator to this view.
 After that we can find deserialized and 
-validated object in `request["data"]`
+validated object in <strong>request["data"]</strong>
 and use it in our view as we want.
 
 ```python
@@ -141,10 +141,10 @@ async def create_user(request: web.Request):
     )
 ```
 
-Also we need to initialize `aiohttp-apispec` 
-with `setup_aiohttp_apispec` function
+Also we need to initialize <strong>aiohttp-apispec</strong> 
+with <strong>setup_aiohttp_apispec</strong> function
 and add validation middleware to our app. 
-Here you can see optional `swagger_path` argument.
+Here you can see optional <strong>swagger_path</strong> argument.
 It is path to our documentation page.
  
 ```python
@@ -208,7 +208,7 @@ class UsersList(Schema):
     users = fields.Nested(User(many=True))
 ```
 
-Use `@docs` decorator to add 
+Use <strong>@docs</strong> decorator to add 
 tags, summary, description or responses 
 list to our views.
 
