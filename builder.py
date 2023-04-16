@@ -43,7 +43,7 @@ if __name__ == "__main__":
                 tmp.render(
                     title="Home",
                     header="Welcome",
-                    body=mistune.markdown(index_md.read()),
+                    body=mistune.markdown(index_md.read(), escape=False),
                     posts=posts,
                 )
             )
