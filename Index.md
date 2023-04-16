@@ -1,4 +1,4 @@
-Hi, my name is Maxim Danilchenko. I am software engineering manager with a wide experience in different areas of web development. My work is to build reliable and scalable systems convenient for maintenance and development.
+Hi, my name is Maksim Danilchenko. I am software engineering manager with a wide experience in different areas of web development. My work is to build reliable and scalable systems convenient for maintenance and development.
 
 Now I am working as Engineering Manager at [inDrive](https://indrive.com/en/home/) in Limassol, Cyprus.
 
