@@ -2,9 +2,6 @@ Hi, my name is Maksim Danilchenko. I am software engineering manager with a wide
 
 Now I am working as Engineering Manager at [inDrive](https://indrive.com/en/home/) in Limassol, Cyprus.
 
-[dmax.dev@gmail.com](mailto:dmax.dev@gmail.com) | [@hiimmax](https://t.me/hiimmax)
-
-[github](https://github.com/maximdanilchenko)
- | [linkedin](linkedin.com/in/maximdanilchenko)
+My email is [dmax.dev@gmail.com](mailto:dmax.dev@gmail.com). My telegram is [@hiimmax](https://t.me/hiimmax)
 
 You can find my cv here: [cv.danilchenko.dev](https://cv.danilchenko.dev)
